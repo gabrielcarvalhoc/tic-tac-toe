@@ -30,6 +30,7 @@ const game = (() => {
     let round = 1;
     let player1Turn;
     let player2Turn;
+    let winner = '';
     let gameOver = false;
 
     const playerTurn = () => {
@@ -62,15 +63,21 @@ const game = (() => {
             let c = gameBoard.board[winCondition[2]];
 
             if (a === player1.mark && a === b && b === c) {
-                console.log(`Player ${player1.number} wins`);
+                winner = player1.number;
+                console.log(`Player ${winner} wins`);
                 gameOver = true;
             }
 
             if (a === player2.mark && a === b && b === c) {
-                console.log(`Player ${player2.number} wins`);
+                winner = player2.number;
+                console.log(`Player ${winner} wins`);
                 gameOver = true;
             }
         })
+
+        if (round === 10 && winner === '') {
+            console.log('It\'s a tie');
+        }
     };
 
     const playRound = () => {
@@ -89,7 +96,7 @@ const game = (() => {
                             gameBoard.board.splice(index, 1, player2.mark);
                             gameBoard.renderBoard();
                         }
-                        
+
                         round++;
                     }
 
@@ -98,7 +105,6 @@ const game = (() => {
             })
         })
     };
-
 
     return {
         playRound
