@@ -1,36 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Play", sans-serif;
+  background-color: #a8dadc;
+  color: #1D3557;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  background-color: #457b9d;
+  color: #f1faee;
+  border-bottom: 3px solid #1D3557;
+}
+.header h1 {
+  font-size: 100px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
 }
 .main .players {
   display: flex;
   gap: 5vw;
+  font-size: 28px;
+}
+.main .message {
+  font-size: 32px;
 }
 .main .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   gap: 2px;
-  background-color: #000;
+  background-color: #464646;
+  font-family: "Audiowide", cursive;
 }
-.main .grid-item {
+.main .grid-container .grid-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  font-size: 120px;
+  background-color: #a8dadc;
+  font-size: 90px;
+  cursor: pointer;
+}
+.main .restart-button {
+  background-color: #457b9d;
+  color: #f1faee;
+  font-size: 32px;
+  border: 3px solid #1D3557;
+  border-radius: 8px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.main .restart-button:hover {
+  background-color: #235574;
 }
 
 /*# sourceMappingURL=style.css.map */
