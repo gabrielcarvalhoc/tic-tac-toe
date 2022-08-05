@@ -12,6 +12,11 @@
     width: 100vw;
     height: 100vh;
 
+    .players {
+        display: flex;
+        gap: 5vw;
+    }
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
