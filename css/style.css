@@ -72,4 +72,45 @@ body {
   background-color: #235574;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    height: 100px;
+  }
+  .header h1 {
+    font-size: 70px;
+  }
+  .main .players {
+    font-size: 24px;
+  }
+  .main .message {
+    font-size: 28px;
+  }
+  .main .grid-container {
+    width: 300px;
+    height: 300px;
+  }
+  .main .grid-container .grid-item {
+    font-size: 60px;
+  }
+  .main .restart-button {
+    font-size: 28px;
+    padding: 8px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    height: 85px;
+  }
+  .header h1 {
+    font-size: 55px;
+  }
+  .main .grid-container {
+    width: 250px;
+    height: 250px;
+  }
+  .main .grid-container .grid-item {
+    font-size: 45px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

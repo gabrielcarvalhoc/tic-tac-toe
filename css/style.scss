@@ -85,3 +85,58 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 100px;
+
+        h1 {
+            font-size: 70px;
+        }
+    }
+
+    .main {
+        .players {
+            font-size: 24px;
+        }
+
+        .message {
+            font-size: 28px;
+        }
+
+        .grid-container {
+            width: 300px;
+            height: 300px;
+
+            .grid-item {
+                font-size: 60px;
+            }
+        }
+
+        .restart-button {
+            font-size: 28px;
+            padding: 8px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        height: 85px;
+
+        h1 {
+            font-size: 55px;
+        }
+    }
+
+    .main {
+        .grid-container {
+            width: 250px;
+            height: 250px;
+
+            .grid-item {
+                font-size: 45px;
+            }
+        }
+    }
+}
