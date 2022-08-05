@@ -9,10 +9,19 @@ const gameBoard = (() => {
         });
     }
 
+    const reset = () => {
+        for (let i = 0; i < board.length; i++) {
+            board[i] = '';
+        }
+
+        renderBoard();
+    }
+
     return {
         board,
         gridItems,
-        renderBoard
+        renderBoard,
+        reset
     };
 })();
 
@@ -106,9 +115,32 @@ const game = (() => {
         })
     };
 
+    const reset = () => {
+        round = 1;
+        winner = '';
+        gameOver = false;
+    }
+
     return {
-        playRound
+        playRound,
+        reset
     };
 })();
 
+const displayController = (() => {
+    const restart = () => {
+        let restartButton = document.querySelector('.restart-button');
+
+        restartButton.addEventListener('click', () => {
+            game.reset();
+            gameBoard.reset();
+        })
+    }
+
+    return {
+        restart
+    }
+})();
+
 game.playRound();
+displayController.restart();
